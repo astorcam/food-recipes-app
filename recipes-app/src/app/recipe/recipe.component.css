@@ -1,0 +1,13 @@
+.card-body{
+    text-align: center;
+}
+.card{
+     background: #ffd7bc;
+     box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn.btn-primary{
+    color: rgb(37, 37, 37);
+    background: #a0f5d4;
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.6);
+}

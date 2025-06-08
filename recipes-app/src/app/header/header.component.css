@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(
+         to bottom,
+      #fab282,
+      #a0f5d4
+  );
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 70rem;
+     gap: 1rem;
+     margin: 0 auto 2rem auto;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
+
+}
+
+
+header h1{
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(255, 255, 255);
+    font-size:3rem;
+    text-align: center;
+    margin: 20px auto;   
+}
+header img{
+    padding-right: 1rem;
+    width: 5rem;
+    object-fit: contain;
+    background-color: transparent;
+    
+}
+
+
+.app-name{
+    text-align: left;
+    padding-left: 1rem;
+}
+.menu{
+     text-align: right;
+    padding-right: 1rem;
+}
+
+.nav ul{
+     list-style-type: none;
+     display: inline-block;
+}
+nav li {
+    display: inline-block; 
+    margin-right: 20px;
+}
+
+a {
+    text-decoration:none;
+    vertical-align: top;
+    color: rgb(255, 255, 255);
+    font-size:1.5rem;
+}
