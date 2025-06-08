@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RecipeComponent } from "../recipe/recipe.component";
 import { Recipe } from '../recipe/recipe.model';
 import { RecipeService } from '../recipe/recipe.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -14,11 +15,25 @@ import { RecipeService } from '../recipe/recipe.service';
 
 
 export class RecipeListComponent {
+  @Input({required:true}) category!:string
  recipeList: Recipe[] = [];
 
-  constructor(private recipeService: RecipeService) {}
+    constructor(
+    private recipeService: RecipeService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.recipeList = this.recipeService.getRecipes();
+    this.route.paramMap.subscribe(params=>{
+      const category=params.get("category")||"all".toLowerCase();
+      const allRecipes = this.recipeService.getRecipes();
+      if(category==="all"){
+        this.recipeList = allRecipes;
+    }
+      else{
+        this.recipeList = allRecipes.filter(recipe=>recipe.category.toLowerCase()===category);
+    }
+    })
   } 
+  
 }

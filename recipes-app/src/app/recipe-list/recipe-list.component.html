@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
     @for (recipe of recipeList; track recipe.id) {
         <div class="col-sm">
-        <app-recipe [title]="recipe.title" [description]="recipe.description"></app-recipe>  
+        <app-recipe [title]="recipe.title" [description]="recipe.description" [id]="recipe.id"></app-recipe>  
         </div>
     }
     </div>

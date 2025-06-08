@@ -9,10 +9,10 @@ import { Component, Input } from '@angular/core';
 export class RecipeComponent {
 @Input({required:true}) title!: string;
 @Input({required:true}) description!: string;
-id!:string;
+@Input({required:true}) id!:string;
 
-// get imagePath(){
-//   return 'assets/users/'+ this.id
-// }
+ get imagePath(){
+  return this.id + ".jpg"
+ }
 
 }

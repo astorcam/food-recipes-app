@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { RecipeComponent } from "./recipe/recipe.component";
-import { RecipeListComponent } from "./recipe-list/recipe-list.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [HeaderComponent, RecipeListComponent],
+  imports: [HeaderComponent,RouterModule],
   styleUrl: './app.component.css'
 })
 export class AppComponent {
