@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 export const routes: Routes = [
-    {path:'', redirectTo:"/recipes/all", pathMatch:'full'},
-    { path: 'recipes/:category', component: RecipeListComponent }
+    {path:'', redirectTo:"/recipes/breakfast", pathMatch:'full'},
+    { path: 'recipes/:category', component: RecipeListComponent },
+    { path: 'recipes/detail/:id', component: RecipeDetailComponent },
     
 ];
 

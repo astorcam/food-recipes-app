@@ -2,10 +2,11 @@
 
 <div class="container">
     <div class="row justify-content-center">
-    @for (recipe of recipeList; track recipe.id) {
+         @if (recipeList | async; as recipes) {
+    @for (recipe of recipes; track recipe.id) {
         <div class="col-sm">
-        <app-recipe [title]="recipe.title" [description]="recipe.description" [id]="recipe.id"></app-recipe>  
+        <app-recipe [title]="recipe.title"  [id]="recipe.id" [img]="recipe.img"></app-recipe>  
         </div>
-    }
+    }}
     </div>
 </div>
