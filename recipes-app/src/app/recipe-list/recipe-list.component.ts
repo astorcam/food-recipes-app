@@ -3,7 +3,6 @@ import { RecipeComponent } from "../recipe/recipe.component";
 import { Recipe } from '../recipe/recipe.model';
 import { RecipeService } from '../recipe/recipe.service';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, map } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { MOCK_RECIPES } from '../recipe/mock-recipes';
 
@@ -27,11 +26,17 @@ export class RecipeListComponent {
   ) {}
 
     ngOnInit() {
-    this.route.paramMap.subscribe(async (params) => {
-      const category = (params.get("category") || "breakfast").toLowerCase();
+  this.route.paramMap.subscribe(async (params) => {
+    const title = params.get("title")?.toLowerCase();
+    const category = (params.get("category") || "breakfast").toLowerCase();
+
+    if (title) {
+      await this.recipeService.searchRecipesByTitle(title);
+      this.recipeList = Promise.resolve(MOCK_RECIPES);
+    } else {
       await this.recipeService.getRecipes(category);
-      this.recipeList = Promise.resolve(MOCK_RECIPES)
-      console.log("MOCK_RECIPES en el componente:", MOCK_RECIPES);
-    });
-  }
+      this.recipeList = Promise.resolve(MOCK_RECIPES);
+    }
+  });
+}
 }

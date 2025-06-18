@@ -46,21 +46,38 @@ getRecipeById(id: string): Observable<RecipeDetails | undefined> {
 }
 
 getRecipesAPI(category: string): Observable<Recipe[]> {
-  
-  const request =this.httpClient
+  if (category === "meat") {
+    const meats: string[] = ["Chicken", "Goat", "Lamb", "Pork"];
+    const requests = meats.map(meat =>
+      this.httpClient.get<MealDBResponse>(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${meat}`)
+    );
+
+    return forkJoin(requests).pipe(
+      map(responses =>
+        responses.flatMap(res => 
+          (res.meals || []).map(meal => ({
+            id: meal.idMeal,
+            title: meal.strMeal,
+            category: category,
+            img: meal.strMealThumb
+          }))
+        )
+      )
+    );
+  } else {
+    return this.httpClient
       .get<MealDBResponse>(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
       .pipe(
         map(res =>
           (res.meals || []).map(meal => ({
             id: meal.idMeal,
             title: meal.strMeal,
-            category: meal.strCategory,
-            img:meal.strMealThumb
+            category: category,
+            img: meal.strMealThumb
           }))
         )
       );
-
-  return request
+  }
 }
 
 buildIngredients(meal:any): string[]{
@@ -74,6 +91,26 @@ buildIngredients(meal:any): string[]{
     ingredients.push(`${measure} ${ingredient}`.trim())
   }
   return ingredients;
+}
+
+async searchRecipesByTitle(title: string) {
+  const recipes = await firstValueFrom(
+    this.httpClient
+      .get<MealDBResponse>(`https://www.themealdb.com/api/json/v1/1/search.php?s=${title}`)
+      .pipe(
+        map(res =>
+          (res.meals || []).map(meal => ({
+            id: meal.idMeal,
+            title: meal.strMeal,
+            category: meal.strCategory,
+            img: meal.strMealThumb
+          }))
+        )
+      )
+  );
+  MOCK_RECIPES.length = 0;
+  MOCK_RECIPES.push(...recipes);
+  console.log(MOCK_RECIPES)
 }
 
 }

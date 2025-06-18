@@ -1,7 +1,11 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Calistoga&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 <header>
     <div class="app-name">
         <img src="yummy-logo.png" alt="app-icon">
-        <h1>Yummy Food</h1>
     </div>
     <div class="menu">
         <nav>
@@ -13,8 +17,17 @@
                 <li><a [routerLink]="['/recipes/seafood']">Seafood</a></li>
                 <li><a [routerLink]="['/recipes/vegan']">Vegan</a></li>
                 <li><a [routerLink]="['/recipes/vegetarian']">Vegetarian</a></li>
-                
             </ul>
         </nav>
+        <div class="container">
+            <div class="search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search recipes..." aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchRecipe">
+                    <button (click)="onSearch()" class="btn btn-outline-secondary" type="button" id="search-addon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
