@@ -2,15 +2,27 @@
     text-align: center;
 }
 .card{
-     background: #ffd7bc;
+    background: #F5C7B8;
      box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
      border-radius: 12px;
 }
 
 .btn.btn-primary{
-    color: rgb(37, 37, 37);
-    background: #a0f5d4;
+    color: #F5C7B8;
+     background: #cf8360;
     box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.6);
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.btn-primary:hover{
+    background-color: #ffddc7;
+    cursor: pointer;
 }
 
 .card-img-top{
@@ -19,4 +31,11 @@
     object-fit: fill;
     max-width: 100%;
     max-height: 100%;
+}
+.card-title{
+    color: #cf8360 !important;
+    font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
 }

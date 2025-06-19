@@ -13,19 +13,18 @@
 
 .card-body{
     text-align: center;
+    color: #cf8360;
 }
 .card{
-     background: #ffd7bc;
+     background: #ffddc7;
      box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
      border-radius: 12px;
-}
 
-.btn.btn-primary{
-    color: rgb(37, 37, 37);
-    background: #a0f5d4;
-    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.6);
 }
-
+.list-group-item{
+  background:#F5C7B8;
+  color: #cf8360;
+}
 
 .card-img {
   max-width: 100%;

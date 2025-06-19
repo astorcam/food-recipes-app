@@ -4,8 +4,8 @@ header {
     padding-bottom: 1rem;
     background: linear-gradient(
          to bottom,
-      #fab282,
-      #a0f5d4
+      #CF8360,
+      #fdf2e1
   );
     align-items: center;
     text-align: center;
@@ -65,3 +65,11 @@ a {
     font-style: normal;
 }
 
+nav a:hover {
+  text-decoration: solid;
+  color: #CF8360;
+}
+
+#search-addon:hover i {
+  color: #CF8360; 
+}

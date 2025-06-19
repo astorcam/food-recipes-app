@@ -12,14 +12,14 @@
       <div class="col-md-8">
         <div class="card-body">
           <h3 class="card-title">{{ recipe.title }}</h3>
-          <h5>Ingredientes</h5>
+          <h5>Ingredients</h5>
           <ul class="list-group list-group-flush mb-3">
             @for (ingredient of recipe.ingredients; track $index) {
               <li class="list-group-item">{{ ingredient }}</li>
             }
           </ul>
 
-          <h5>Pasos</h5>
+          <h5>Steps</h5>
           <ol class="list-group list-group-numbered">
             @for (step of recipe.steps; track $index) {
               <li class="list-group-item">{{ step }}</li>
