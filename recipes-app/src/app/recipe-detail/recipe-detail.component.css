@@ -13,7 +13,7 @@
 
 .card-body{
     text-align: center;
-    color: #cf8360;
+    color: #56494C;
 }
 .card{
      background: #ffddc7;
@@ -24,10 +24,39 @@
 .list-group-item{
   background:#F5C7B8;
   color: #cf8360;
+   font-family: "Noto Sans Display", sans-serif;
 }
 
 .card-img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.card-title{
+  color: #56494C;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn.btn-primary{
+    color: #F5C7B8;
+    background: #cf8360;
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.6);
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.btn-primary:hover,  .btn.btn-primary.active{
+    background-color: #ffddc7;
+    cursor: pointer;
+}
+.recipe-section{
+  font-family: "Noto Sans Display", sans-serif;
 }

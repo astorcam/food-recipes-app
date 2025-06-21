@@ -4,17 +4,15 @@ header {
     padding-bottom: 1rem;
     background: linear-gradient(
          to bottom,
-      #CF8360,
+      #fae2bf,
       #fdf2e1
   );
     align-items: center;
     text-align: center;
-    width: 90%;
-    max-width: 70rem;
-     gap: 1rem;
-     margin: 0 auto 2rem auto;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
+    width: 100%;
+    gap: 1rem;
+    margin: 0 auto 2rem auto;
+
     box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
 
 }
@@ -42,8 +40,8 @@ header img{
     padding-left: 1rem;
 }
 .menu{
-     text-align: right;
-    padding-right: 1rem;
+    text-align: center;
+    max-width: 100%;
 }
 
 .nav ul{
@@ -58,8 +56,8 @@ nav li {
 a {
     text-decoration:none;
     vertical-align: top;
-    color: rgb(255, 255, 255);
-    font-size:1.5rem;
+    color: #CF8360;
+    font-size:2rem;
     font-family: "Calistoga", serif;
     font-weight: 400;
     font-style: normal;
@@ -67,9 +65,19 @@ a {
 
 nav a:hover {
   text-decoration: solid;
-  color: #CF8360;
+  color: #F5C7B8;
 }
 
 #search-addon:hover i {
-  color: #CF8360; 
+  color: #F5C7B8; 
+}
+
+.search-bar {
+margin-left: 0;
+margin-right: 10px;
+  max-width:   200px; 
+  margin-left: auto;
+}
+.btn.btn-secondary{
+    background: #CF8360;
 }

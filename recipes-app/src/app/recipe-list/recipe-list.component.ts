@@ -28,13 +28,13 @@ export class RecipeListComponent {
     ngOnInit() {
   this.route.paramMap.subscribe(async (params) => {
     const title = params.get("title")?.toLowerCase();
-    const category = (params.get("category") || "breakfast").toLowerCase();
+    this.category = (params.get("category") || "breakfast").toLowerCase();
 
     if (title) {
       await this.recipeService.searchRecipesByTitle(title);
       this.recipeList = Promise.resolve(MOCK_RECIPES);
     } else {
-      await this.recipeService.getRecipes(category);
+      await this.recipeService.getRecipes(this.category);
       this.recipeList = Promise.resolve(MOCK_RECIPES);
     }
   });

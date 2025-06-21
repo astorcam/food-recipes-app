@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RecipeService } from '../recipe/recipe.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { RecipeDetails } from '../recipe/recipe.model';
 import { firstValueFrom, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-recipe-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './recipe-detail.component.html',
   styleUrl: './recipe-detail.component.css'
 })
