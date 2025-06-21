@@ -16,6 +16,7 @@
     color: #56494C;
 }
 .card{
+    margin: 0 auto;
      background: #ffddc7;
      box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
      border-radius: 12px;

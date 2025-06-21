@@ -1,5 +1,13 @@
 .card-body{
     text-align: center;
+    min-height: 150px;
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .card{
     background: #F5C7B8;
@@ -27,7 +35,6 @@
 }
 
 .card-img-top{
-    /* width: 300px; */
     height: 200px;
     object-fit: fill;
     max-width: 100%;
