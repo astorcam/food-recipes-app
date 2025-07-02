@@ -21,6 +21,7 @@
      box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
      border-radius: 12px;
 }
+
 #vegan{
     padding-bottom: 2rem;
     max-width: 100%;
@@ -46,7 +47,6 @@
   
   
 }
-
 #vegan h1{
     color: #fdf2e1;
     font-size:2rem;
@@ -55,6 +55,8 @@
     font-style: normal;
 }
 #vegan .card-title {
+    padding-top: 0rem;
+    padding-left: 0rem;
     color: #fdf2e1 !important;
     font-family: "Chewy", system-ui;
     font-weight: 400;
@@ -72,6 +74,63 @@
     }
 
 #vegan img:hover {
+  opacity: 1 !important;
+  transform: none !important;
+  zoom: 1 !important;
+}
+
+#fish{
+    padding-bottom: 2rem;
+    max-width: 100%;
+    position: relative;
+}
+
+#fish .card{
+    background: #4F6D7A;
+     box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
+     border-radius: 12px;
+    overflow: hidden;
+}
+#fish .card-body {
+  text-align: center!important;
+    display: flex;
+  flex-direction: column;
+}
+
+#fish .col-md-6:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+#fish h1{
+    color: #fdf2e1;
+    font-size:2rem;
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#fish .card-title {
+    padding-top: 0rem;
+    padding-left: 0rem;
+    color: #fdf2e1 !important;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+#fish p{
+    padding: 0.5rem 1rem;
+    color: #fdf2e1;
+    background: rgba(0, 0, 0, 0.5);
+    font-size:1rem;
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+#fish img:hover {
   opacity: 1 !important;
   transform: none !important;
   zoom: 1 !important;

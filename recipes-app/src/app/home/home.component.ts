@@ -17,6 +17,7 @@ export class HomeComponent {
   recommendRecipes!: Recipe[];
   pastaRecipes!: Recipe[];
   veganRecipe!: Recipe;
+  fishRecipe!: Recipe;
 
    constructor(
     private recipeService: RecipeService,
@@ -25,9 +26,12 @@ export class HomeComponent {
   
 async ngOnInit() {
   this.pastaRecipes=await firstValueFrom(this.recipeService.getRecipesAPI("pasta"));
-  const veganRecipse=await firstValueFrom(this.recipeService.getRecipesAPI("vegan"));
-  const random = Math.floor(Math.random() * veganRecipse.length);
-  this.veganRecipe=veganRecipse[random];
+  const veganRecipes=await firstValueFrom(this.recipeService.getRecipesAPI("vegan"));
+  const fishRecipes=await firstValueFrom(this.recipeService.getRecipesAPI("seafood"));
+  const randomVegan = Math.floor(Math.random() * veganRecipes.length);
+  this.veganRecipe=veganRecipes[randomVegan];
+  const randomFish = Math.floor(Math.random() * fishRecipes.length);
+  this.fishRecipe=fishRecipes[randomFish];
   this.recommendRecipes=await this.recipeService.getRecommendations();
 }
 }

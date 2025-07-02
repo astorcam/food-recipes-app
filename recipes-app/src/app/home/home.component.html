@@ -1,8 +1,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Chewy&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=eco" />
-
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <!-- RECOMMEND -->
@@ -113,4 +112,30 @@
     </div>
 </div>
 </div>
+
+<!-- FISH -->
+<div class="container" id="fish" *ngIf="fishRecipe">
+   <div class="card" >
+     
+   <div class="row">
+       <!-- dewscripcion receta -->
+       <div class="col-md-6">
+              <div class="card-body">
+                  <h5 class="card-title">Go fish!<span class="material-symbols-outlined">set_meal</span></h5>
+                  <h1 >{{fishRecipe.title}} </h1>
+                  <p>Fresh from the sea — light, healthy, and full of flavor.</p>
+                  <a [routerLink]="['/recipes/detail', fishRecipe.id]" class="btn btn-pill">See recipe  <i class="bi bi-eye-fill"></i></a>
+              </div>
+             </div>
+     <!-- Imagen grande (izquierda) -->
+     <div class="col-md-6">
+       <div class="img-wrapper">
+           <a class="recipe-recommend-main" >
+             <img [src]="fishRecipe.img">  
+           </a>
+       </div>
+     </div>
+         </div>
+       </div>
+     </div>
 
