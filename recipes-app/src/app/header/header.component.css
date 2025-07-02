@@ -1,4 +1,7 @@
 header {
+    top: 0;
+    z-index: 99;
+    position: sticky;
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -28,7 +31,7 @@ header h1{
 }
 header img{
     padding-right: 1rem;
-    width: 10rem;
+    width: 15rem;
     object-fit: contain;
     background-color: transparent;
     
@@ -49,6 +52,7 @@ header img{
      display: inline-block;
 }
 nav li {
+    padding-top: 1rem;
     display: inline-block; 
     margin-right: 20px;
 }
@@ -68,9 +72,7 @@ nav a:hover {
   color: #F5C7B8;
 }
 
-#search-addon:hover i {
-  color: #F5C7B8; 
-}
+
 
 .search-bar {
 margin-left: 0;
@@ -79,5 +81,13 @@ margin-right: 10px;
   margin-left: auto;
 }
 .btn.btn-secondary{
-    background: #CF8360;
+    border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+    background: linear-gradient(135deg, #cf8360, #b56c50);
 }
+.btn-secondary:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+
+}
+

@@ -14,6 +14,7 @@ export class RecipeService {
 
    apiUrlCategories="www.themealdb.com/api/json/v1/1/filter.php?c=${category}"
    apiUrlDetail="www.themealdb.com/api/json/v1/1/lookup.php?i=${id}"
+   apiUrlRandom="https://www.themealdb.com/api/json/v1/1/random.php"
 
 constructor(
   private httpClient:HttpClient
@@ -113,4 +114,30 @@ async searchRecipesByTitle(title: string) {
   console.log(MOCK_RECIPES)
 }
 
+async getRecommendations(): Promise<Recipe[]>{
+  const recommendRecipes=[];
+  for(let i=0;i<5;i++){
+    const recipe=await this.getRandomRecipe();
+    recommendRecipes.push(recipe);
+  }
+  return recommendRecipes;
+}
+
+
+async getRandomRecipe(): Promise<Recipe> {
+  const recipes = await firstValueFrom(
+    this.httpClient.get<MealDBResponse>(this.apiUrlRandom).pipe(
+      map(res =>
+        (res.meals || []).map(meal => ({
+          id: meal.idMeal,
+          title: meal.strMeal,
+          category: meal.strCategory,
+          img: meal.strMealThumb
+        }))
+      )
+    )
+  );
+
+  return recipes[0];
+}
 }
