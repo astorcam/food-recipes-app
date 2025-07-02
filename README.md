@@ -38,3 +38,5 @@ A modern recipe web application built with **Angular**, powered by the **[TheMea
    npm install
    ng serve
    Open your browser at: http://localhost:4200/
+👨‍🍳 Author
+Built by Asier Astorquiza with ❤️ and a love for good food.
