@@ -5,15 +5,16 @@ import { RecipeService } from '../recipe/recipe.service';
 import { Recipe } from '../recipe/recipe.model';
 import { MOCK_RECIPES } from '../recipe/mock-recipes';
 import { firstValueFrom } from 'rxjs';
+import { LoadingComponent } from "../loading/loading.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, LoadingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  isLoading = true;
   recommendRecipes!: Recipe[];
   pastaRecipes!: Recipe[];
   veganRecipe!: Recipe;
@@ -25,6 +26,8 @@ export class HomeComponent {
   ) {}
   
 async ngOnInit() {
+  this.isLoading = true;
+  try {
   this.pastaRecipes=await firstValueFrom(this.recipeService.getRecipesAPI("pasta"));
   const veganRecipes=await firstValueFrom(this.recipeService.getRecipesAPI("vegan"));
   const fishRecipes=await firstValueFrom(this.recipeService.getRecipesAPI("seafood"));
@@ -33,5 +36,8 @@ async ngOnInit() {
   const randomFish = Math.floor(Math.random() * fishRecipes.length);
   this.fishRecipe=fishRecipes[randomFish];
   this.recommendRecipes=await this.recipeService.getRecommendations();
+  } 
+  finally{
+    this.isLoading = false;}
 }
 }

@@ -10,7 +10,7 @@ html {
 }
 body {
   background-image:
-  url('/fondo_comida.png'), 
+  url('/food-recipes-app/public/fondo_comida.png'), 
   linear-gradient(to right, #f7c3b2, #f0b194);
   background-repeat: repeat,repeat;
   background-size: auto, cover;
