@@ -3,6 +3,7 @@
 A modern recipe web application built with **Angular**, powered by the **[TheMealDB](https://www.themealdb.com/api.php)** API. Users can browse recipes by category, search by name, view full recipe details, and get random recommendations — all with a clean, responsive design.
 
 🔗 **Live Repo**: [https://github.com/astorcam/food-recipes-app](https://github.com/astorcam/food-recipes-app)
+🔗 **Live page**: [[https://github.com/astorcam/food-recipes-app](https://github.com/astorcam/food-recipes-app)](https://astorcam.github.io/food-recipes-app/)
 
 ---
 
