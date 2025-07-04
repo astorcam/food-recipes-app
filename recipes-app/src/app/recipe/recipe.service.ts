@@ -39,7 +39,7 @@ getRecipeById(id: string): Observable<RecipeDetails | undefined> {
           title: meal.strMeal,
           category: meal.strCategory,
           ingredients: this.buildIngredients(meal),
-          steps: meal.strInstructions.split('\r\n'),
+          steps: meal.strInstructions.split('\r\n').filter((line:string) => line.trim() !== ''),
           img:meal.strMealThumb
         };
       })

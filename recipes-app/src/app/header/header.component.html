@@ -27,7 +27,7 @@
     </div>
             <div class="search-bar">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search recipes..." aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchRecipe">
+                    <input type="text" class="form-control" placeholder="Search recipes..." aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchRecipe" (keyup.enter)="onSearch()">
                     <button (click)="onSearch()" class="btn btn-secondary" type="button" id="search-addon">
                         <i class="fas fa-search"></i>
                     </button>
