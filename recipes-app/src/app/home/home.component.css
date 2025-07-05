@@ -1,145 +1,117 @@
-.container{
-    padding-bottom: 2rem;
-    max-width: 90%;
-    position: relative;
-    overflow: hidden!important;
+.container {
+  padding-bottom: 2rem;
+  max-width: 90%;
+  position: relative;
+  overflow: hidden;
 }
 
-.card-body{
-    text-align: left;
-    min-height: 150px;
-}
-
-.card-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.card{
-    background: #fdf2e1;
-     box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
-     border-radius: 12px;
-}
-
-#vegan{
-    padding-bottom: 2rem;
-    max-width: 100%;
-    position: relative;
-}
-
-#vegan .card{
-    background: #5F7367;
-     box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
-     border-radius: 12px;
-    overflow: hidden;
-}
-#vegan .card-body {
-  text-align: center!important;
-    display: flex;
-  flex-direction: column;
-}
-
-#vegan .col-md-6:last-child {
+.card-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
-}
-#vegan h1{
-    color: #fdf2e1;
-    font-size:2rem;
-    font-family: "Calistoga", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-#vegan .card-title {
-    padding-top: 0rem;
-    padding-left: 0rem;
-    color: #fdf2e1 !important;
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-}
-#vegan p{
-    padding: 0.5rem 1rem;
-    color: #fdf2e1;
-    background: rgba(0, 0, 0, 0.5);
-    font-size:1rem;
-    font-family: "Calistoga", serif;
-    font-weight: 400;
-    font-style: normal;
-    }
-
-#vegan img:hover {
-  opacity: 1 !important;
-  transform: none !important;
-  zoom: 1 !important;
+  height: 100%;
 }
 
-#fish{
-    padding-bottom: 2rem;
-    max-width: 100%;
-    position: relative;
+.card, #vegan .card, #fish .card {
+  box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-#fish .card{
-    background: #4F6D7A;
-     box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.6);
-     border-radius: 12px;
-    overflow: hidden;
+.card {
+  background: #fdf2e1;
 }
-#fish .card-body {
-  text-align: center!important;
-    display: flex;
+
+#vegan, #fish {
+  padding-bottom: 2rem;
+  max-width: 100%;
+  position: relative;
+}
+
+#vegan .card {
+  background: #5F7367;
+}
+
+#fish .card {
+  background: #4F6D7A;
+}
+
+#vegan .card-body, #fish .card-body {
+  text-align: center;
+  display: flex;
   flex-direction: column;
 }
 
+#vegan .col-md-6:last-child,
 #fish .col-md-6:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
 }
-#fish h1{
-    color: #fdf2e1;
-    font-size:2rem;
-    font-family: "Calistoga", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-#fish .card-title {
-    padding-top: 0rem;
-    padding-left: 0rem;
-    color: #fdf2e1 !important;
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-}
-#fish p{
-    padding: 0.5rem 1rem;
-    color: #fdf2e1;
-    background: rgba(0, 0, 0, 0.5);
-    font-size:1rem;
-    font-family: "Calistoga", serif;
-    font-weight: 400;
-    font-style: normal;
-    }
 
+#vegan h1,
+#fish h1,
+h1 {
+  color: #fdf2e1;
+  font-size: 2rem;
+  font-family: "Calistoga", serif;
+  font-weight: 400;
+}
+
+.card-title,
+#vegan .card-title,
+#fish .card-title {
+  padding: 1.5rem 0 0 5rem;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #5a3821;
+}
+
+#vegan .card-title,
+#fish .card-title {
+  color: #fdf2e1 !important;
+  padding: 0;
+}
+
+#vegan p,
+#fish p,
+.recipe-recommend p,
+.recipe-recommend-main p,
+p {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-family: "Calistoga", serif;
+  font-weight: 400;
+  color: #fdf2e1;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px auto;
+  color: #CF8360;
+  background: none;
+}
+
+#vegan img:hover,
 #fish img:hover {
-  opacity: 1 !important;
-  transform: none !important;
-  zoom: 1 !important;
+  opacity: 1;
+  transform: none;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: fill;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .btn-pill {
-margin: 1rem auto 0 auto;
+  margin: 1rem auto 0;
   background: linear-gradient(135deg, #cf8360, #b56c50);
-color: #f1dcd5;
+  color: #f1dcd5;
   padding: 0.7rem 1.6rem;
   border: none;
   border-radius: 30px;
@@ -153,111 +125,50 @@ color: #f1dcd5;
   transform: scale(1.05);
 }
 
-.card-img-top{
-    height: 200px;
-    object-fit: fill;
-    max-width: 100%;
-    max-height: 100%;
-}
-.card-title{
-    padding-left: 5rem;
-    padding-top: 1.5rem;
-    color: #5a3821 !important;
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-
-}
-
-p{
-    display: inline-block;
-    vertical-align: top;
-    color: #CF8360;
-    font-size:1rem;
-    text-align: left;
-    margin: 20px auto;   
-}
-
-.recipe-recommend img {
-  padding-bottom: 1rem;
+.recipe-recommend img,
+.recipe-recommend-main img {
   object-fit: cover;
   opacity: 1;
   display: block;
-  width:100%;
-  height: 300px;
-  transition: .4s ease;
+  width: 100%;
+  transition: 0.4s ease;
   backface-visibility: hidden;
 }
 
-.recipe-recommend:hover img {
-  opacity: 0.4;
-  zoom: 1;
-    transform: scale(1.1);
-
-}
-
-.recipe-recommend p {
-position: absolute;
-bottom: 0;
-padding: 0.5rem 1rem;
-color: #fff4ed;
-text-decoration: none;
-background: rgba(0, 0, 0, 0.5);
-font-size:1.5rem;
-font-family: "Calistoga", serif;
-font-weight: 400;
-font-style: normal;
+.recipe-recommend img {
+  height: 300px;
 }
 
 .recipe-recommend-main img {
-object-fit: cover;
-  opacity: 1;
-  display: block;
-  width:100%;
   height: 585px;
-  transition: .4s ease;
-  backface-visibility: hidden;
 }
 
+.recipe-recommend:hover img,
 .recipe-recommend-main:hover img {
   opacity: 0.4;
-  zoom: 1;
   transform: scale(1.1);
 }
 
+.recipe-recommend p,
 .recipe-recommend-main p {
-position: absolute;
-bottom: 0;
-padding: 0.5rem 1rem;
-color: #fff4ed;
-text-decoration: none;
-background: rgba(0, 0, 0, 0.5);
-font-size:1.5rem;
-font-family: "Calistoga", serif;
-font-weight: 400;
-font-style: normal;
+  position: absolute;
+  bottom: 0;
+  color: #fff4ed;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
+/* Image wrapper */
 .img-wrapper {
-     position: relative;
-    overflow: hidden;
-    
+  position: relative;
+  overflow: hidden;
 }
-h1{
-    color: #CF8360;
-    font-size:2rem;
-    font-family: "Calistoga", serif;
-    font-weight: 400;
-    font-style: normal;
-    
-}
-
 
 /* MOVIL */
-
 @media (max-width: 768px) {
-  .card-title {
+  .card-title,
+  #vegan .card-title,
+  #fish .card-title {
     font-size: 2.3rem;
     padding-left: 1rem;
     text-align: center;
@@ -270,7 +181,6 @@ h1{
 
   .btn-pill {
     width: 100%;
-    font-size: 1rem;
     padding: 0.7rem 1rem;
   }
 
@@ -279,6 +189,7 @@ h1{
   }
 
   .recipe-recommend img {
+    padding-top: 1rem;
     height: 200px;
   }
 
@@ -289,14 +200,9 @@ h1{
     text-align: center;
   }
 
-  #vegan .card-title,
-  #fish .card-title {
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 0;
-  }
-
-  p, .recipe-recommend p, .recipe-recommend-main p {
+  p,
+  .recipe-recommend p,
+  .recipe-recommend-main p {
     font-size: 1rem;
     text-align: center;
     padding: 0.5rem;
