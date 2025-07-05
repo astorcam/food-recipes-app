@@ -19,6 +19,7 @@ import { MOCK_RECIPES } from '../recipe/mock-recipes';
 export class RecipeListComponent {
   @Input({required:true}) category!:string
   recipeList!: Promise<Recipe[]>;
+  
 
     constructor(
     private recipeService: RecipeService,
@@ -33,6 +34,7 @@ export class RecipeListComponent {
     if (title) {
       await this.recipeService.searchRecipesByTitle(title);
       this.recipeList = Promise.resolve(MOCK_RECIPES);
+      this.category=title;
     } else {
       await this.recipeService.getRecipes(this.category);
       this.recipeList = Promise.resolve(MOCK_RECIPES);
