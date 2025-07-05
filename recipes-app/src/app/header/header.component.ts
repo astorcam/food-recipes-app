@@ -13,8 +13,16 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
- searchRecipe: string = '';
-constructor(private router: Router) {}
+
+  searchRecipe: string = '';
+  constructor(private router: Router) {}
+
+  toggleNavbar() {
+   const nav = document.getElementById("topnav");
+  if (nav) {
+    nav.classList.toggle("responsive");
+  }
+}
 
  onSearch() {
     const title = this.searchRecipe.trim();
