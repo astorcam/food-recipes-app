@@ -6,19 +6,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <header>
   <div class="app-name">
-    <a [routerLink]="['/']"> 
+    <a [routerLink]="['/']" aria-label="app home"> 
       <img src="/food-recipes-app/public/yummy-logo.png" alt="app-icon">
     </a>
   </div>
 
   <nav class="topnav" id="topnav">
-    <a [routerLink]="['/recipes/breakfast']">Breakfast</a>
-    <a [routerLink]="['/recipes/dessert']">Desserts</a>
-    <a [routerLink]="['/recipes/pasta']">Pasta</a>
-    <a [routerLink]="['/recipes/meat']">Meat</a>
-    <a [routerLink]="['/recipes/seafood']">Seafood</a>
-    <a [routerLink]="['/recipes/vegan']">Vegan</a>
-    <a [routerLink]="['/recipes/vegetarian']">Vegetarian</a>
+    <a [routerLink]="['/recipes/breakfast']" aria-label="Breakfast">Breakfast</a>
+    <a [routerLink]="['/recipes/dessert']" aria-label="Desserts">Desserts</a>
+    <a [routerLink]="['/recipes/pasta']" aria-label="Pasta">Pasta</a>
+    <a [routerLink]="['/recipes/meat']" aria-label="Meat">Meat</a>
+    <a [routerLink]="['/recipes/seafood']" aria-label="Seafood">Seafood</a>
+    <a [routerLink]="['/recipes/vegan']" aria-label="Vegan">Vegan</a>
+    <a [routerLink]="['/recipes/vegetarian']" aria-label="Vegetarian">Vegetarian</a>
     <a href="javascript:void(0);" class="icon" (click)="toggleNavbar()">
       <i class="fa fa-bars"></i>
     </a>
@@ -27,7 +27,7 @@
   <div class="search-bar">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search recipes..." aria-label="Search" [(ngModel)]="searchRecipe" (keyup.enter)="onSearch()" />
-      <button (click)="onSearch()" class="btn btn-secondary">
+      <button (click)="onSearch()" class="btn btn-secondary" aria-label="Search recipe">
         <i class="fas fa-search"></i>
       </button>
     </div>

@@ -49,8 +49,8 @@
   align-items: center;
 }
 
-#vegan h1,
-#fish h1,
+#vegan h3,
+#fish h3,
 h1 {
   color: #fdf2e1;
   font-size: 2rem;

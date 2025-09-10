@@ -12,7 +12,7 @@
   <div class="container" *ngIf="recommendRecipes">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Some recommendations!</h5>
+        <h2 class="card-title">Some recommendations!</h2>
       </div>
       <div class="container">
         
@@ -20,8 +20,8 @@
           <!-- Imagen grande (izquierda) -->
           <div class="col-md-6">
             <div class="img-wrapper">
-              <a  class="recipe-recommend-main" [routerLink]="['/recipes/detail', recommendRecipes[0].id]">
-                <img  [src]="recommendRecipes[0].img"> 
+              <a  class="recipe-recommend-main" [routerLink]="['/recipes/detail', recommendRecipes[0].id]" aria-label="recommended main recipe">
+                <img  [src]="recommendRecipes[0].img" alt="recmmended main recipe image"> 
                 <p>
                   {{recommendRecipes[0].title}} 
            </p>
@@ -35,8 +35,8 @@
         <div class="row" >
           <div class="col-6" *ngFor="let recipe of recommendRecipes.slice(1,5)">
             <div class="img-wrapper">
-              <a class="recipe-recommend" [routerLink]="['/recipes/detail', recipe.id]">
-                <img [src]="recipe.img" >
+              <a class="recipe-recommend" [routerLink]="['/recipes/detail', recipe.id]" aria-label="recommended recipe">
+                <img [src]="recipe.img" alt="recmmended recipe image">
                 <p>{{recipe.title}}</p>
               </a>
               
@@ -57,8 +57,8 @@
       <!-- Imagen grande (izquierda) -->
       <div class="col-md-6">
         <div class="img-wrapper">
-          <a class="recipe-recommend-main" >
-            <img [src]="veganRecipe.img">  
+          <a class="recipe-recommend-main" aria-label="recommended main vegan recipe">
+            <img [src]="veganRecipe.img" alt="recommended main vegan recipe image">  
           </a>
         </div>
       </div>
@@ -66,10 +66,10 @@
       <!-- dewscripcion receta -->
       <div class="col-md-6">
         <div class="card-body">
-          <h5 class="card-title">Try it veggie!<span class="material-symbols-outlined">eco</span></h5>
-          <h1 >{{veganRecipe.title}} </h1>
+          <h2 class="card-title">Try it veggie!<span class="material-symbols-outlined">eco</span></h2>
+          <h3 >{{veganRecipe.title}} </h3>
           <p>Healthy, tasty, and 100% vegan — fuel your body the green way.</p>
-          <a [routerLink]="['/recipes/detail', veganRecipe.id]" class="btn btn-pill">See recipe  <i class="bi bi-eye-fill"></i></a>
+          <a [routerLink]="['/recipes/detail', veganRecipe.id]" class="btn btn-pill" aria-label="See vegan recipe">See recipe  <i class="bi bi-eye-fill"></i></a>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
       <div class="container" *ngIf="pastaRecipes">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">For pasta lovers...</h5>
+            <h2 class="card-title">For pasta lovers...</h2>
           </div>
     <div class="container">
       
@@ -88,8 +88,8 @@
         <!-- Imagen grande (izquierda) -->
         <div class="col-md-6">
           <div class="img-wrapper">
-            <a class="recipe-recommend-main" [routerLink]="['/recipes/detail', pastaRecipes[0].id]">
-              <img  [src]="pastaRecipes[0].img"> 
+            <a class="recipe-recommend-main" [routerLink]="['/recipes/detail', pastaRecipes[0].id]" aria-label="recommended main pasta recipe">
+              <img  [src]="pastaRecipes[0].img" alt="recommended main pasta recipe image"> 
               <p>
                 {{pastaRecipes[0].title}} 
               </p>
@@ -103,11 +103,10 @@
           <div class="row">
             <div class="col-6" *ngFor="let recipe of pastaRecipes.slice(1,5)">
               <div class="img-wrapper">
-                <a class="recipe-recommend" [routerLink]="['/recipes/detail', recipe.id]">
-                  <img [src]="recipe.img" >
+                <a class="recipe-recommend" [routerLink]="['/recipes/detail', recipe.id]" aria-label="recommended pasta recipe">
+                  <img [src]="recipe.img" alt="recommended pasta recipe image">
                   <p>{{recipe.title}}</p>
-                </a>
-                
+                </a>                
               </div>
             </div>
           </div>
@@ -125,17 +124,17 @@
       <!-- dewscripcion receta -->
       <div class="col-md-6">
         <div class="card-body">
-          <h5 class="card-title">Go fish!<span class="material-symbols-outlined">set_meal</span></h5>
-          <h1 >{{fishRecipe.title}} </h1>
+          <h2 class="card-title">Go fish!<span class="material-symbols-outlined">set_meal</span></h2>
+          <h3 >{{fishRecipe.title}} </h3>
           <p>Fresh from the sea — light, healthy, and full of flavor.</p>
-          <a [routerLink]="['/recipes/detail', fishRecipe.id]" class="btn btn-pill">See recipe  <i class="bi bi-eye-fill"></i></a>
+          <a [routerLink]="['/recipes/detail', fishRecipe.id]" class="btn btn-pill"  aria-label="See fish recipe">See recipe  <i class="bi bi-eye-fill"></i></a>
         </div>
       </div>
       <!-- Imagen grande (izquierda) -->
       <div class="col-md-6">
        <div class="img-wrapper">
          <a class="recipe-recommend-main" >
-           <img [src]="fishRecipe.img">  
+           <img [src]="fishRecipe.img" alt="fish recipe image">  
           </a>
         </div>
       </div>

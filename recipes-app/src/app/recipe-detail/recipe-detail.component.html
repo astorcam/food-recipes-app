@@ -18,15 +18,15 @@
       <!-- Contenido a la derecha -->
       <div class="col-md-8">
         <div class="card-body">
-          <h3 class="card-title">{{ recipe.title }}</h3>
-          <h5 class="recipe-section"> <span class="material-symbols-outlined">grocery</span>Ingredients</h5>
+          <h1 class="card-title">{{ recipe.title }}</h1>
+          <h2 class="recipe-section"> <span class="material-symbols-outlined">grocery</span>Ingredients</h2>
           <ul class="list-group list-group-flush mb-3">
             @for (ingredient of recipe.ingredients; track $index) {
               <li class="list-group-item">{{ ingredient }}</li>
             }
           </ul>
 
-          <h5 class="recipe-section"><span class="material-symbols-outlined">footprint</span>Steps</h5>
+          <h2 class="recipe-section"><span class="material-symbols-outlined">footprint</span>Steps</h2>
           <ol class="list-group list-group-numbered">
             @for (step of recipe.steps; track $index) {
               <li class="list-group-item">{{ step }}</li>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <a [routerLink]="['/recipes',recipe.category]" class="btn btn-pill">Go back </a>
+    <a [routerLink]="['/recipes',recipe.category]" class="btn btn-pill" aria-label="Go back">Go back </a>
   </div>
 </div>
 }
